@@ -18,6 +18,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install libortp-dev
           sudo apt-get install libmediastreamer-dev
+          sudo apt-get install gdb
     - name: make
       run:  gcc -g mstest2.c -o mstest2 `pkg-config mediastreamer --libs --cflags`
     - name: make check
