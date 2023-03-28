@@ -1,5 +1,6 @@
 # dtmf_generator
 Simple DTMF-generator based on Mediastreamer2.
+![image](https://user-images.githubusercontent.com/1526432/228306570-0fa9479d-81cc-4a31-bdaa-4f498778fe15.png)
 
 This program is example of simple audio signal generator for my article on Medium:<br>
 [What’s Mediastreamer2. Examples of Filters Using](https://medium.com/gitconnected/chapter-3-examples-of-using-filters-612f2121301)
