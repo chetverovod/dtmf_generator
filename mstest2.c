@@ -1,4 +1,6 @@
 /* File mstest2.c Sound Generator. */
+
+/* Include filters header files. */ 
 #include <mediastreamer2/msfilter.h>
 #include <mediastreamer2/msticker.h>
 #include <mediastreamer2/dtmfgen.h>
@@ -18,12 +20,6 @@ int main()
     scm = ms_factory_get_snd_card_manager(mf);
     MSSndCard *card_playback = ms_snd_card_manager_get_default_card(scm);
     MSFilter  *snd_card_write = ms_snd_card_create_writer(card_playback);
-/*
-    MSFilter  *voidsource = ms_filter_new(MS_VOID_SOURCE_ID);
-    MSFilter  *dtmfgen = ms_filter_new(MS_DTMF_GEN_ID);
-    MSSndCard *card_playback = ms_snd_card_manager_get_default_card(ms_snd_card_manager_get());
-    MSFilter  *snd_card_write = ms_snd_card_create_writer(card_playback);
-  */
 
     /* Instantiating ticker. */
     MSTicker *ticker = ms_ticker_new();
@@ -39,6 +35,7 @@ int main()
     char key='1';
     ms_filter_call_method(dtmfgen, MS_DTMF_GEN_PLAY, (void*)&key);
     
-    /* We give time for all data blocks to be received by the sound card.*/
+    /* We give time 2 seconds for all data blocks to be received by the sound
+     card.*/
     ms_sleep(2);   
 }
