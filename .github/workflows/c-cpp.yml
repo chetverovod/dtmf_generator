@@ -13,11 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
     - name: make
       run:  gcc mstest2.c -o mstest2 `pkg-config mediastreamer --libs --cflags`
     - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      run: ./mstest2
+    
