@@ -20,3 +20,4 @@ $ gcc mstest2.c -o mstest2 `pkg-config mediastreamer --libs --cflags`
 ```
 $ ./mstest2
 ```
+You will hear shot beep sound.
