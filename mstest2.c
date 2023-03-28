@@ -11,7 +11,7 @@ int main()
     
     MSFactory *mf;  /* Factory of Mediastremer's filters. */
     mf = ms_factory_new();
-	ms_factory_init_voip(mf);
+    ms_factory_init_voip(mf);
   
     /* Instantiating filters. */
     MSFilter *voidsource = ms_factory_create_filter(mf, MS_VOID_SOURCE_ID);
