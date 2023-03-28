@@ -22,5 +22,5 @@ jobs:
     - name: make
       run:  gcc -g mstest2.c -o mstest2 `pkg-config mediastreamer --libs --cflags`
     - name: make check
-      run: gdb gdb -ex run ./mstest2
+      run: gdb gdb -ex run mstest2
     
