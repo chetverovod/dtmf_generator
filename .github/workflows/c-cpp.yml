@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies on ubuntu
-      run: 
+      run: |
           sudo apt-get update
           sudo apt-get install libmediastreamer-dev
     - name: make
